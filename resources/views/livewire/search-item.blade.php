@@ -1,0 +1,1 @@
+<a href="{{ $item->url() }}"><x-drupal::highlight :text="(string) $item->get(array_key_first(app(Proteo\DrupalBackend\Descriptor\Descriptor::class)->contentType($type)->fields))" :terms="$highlight"/></a>

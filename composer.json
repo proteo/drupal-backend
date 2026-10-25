@@ -1,0 +1,45 @@
+{
+    "name": "proteo/drupal-backend",
+    "description": "Laravel package for consuming a Drupal JSON:API backend: a descriptor-driven content layer.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.4",
+        "illuminate/support": "^13.0",
+        "livewire/livewire": "^4.3"
+    },
+    "suggest": {
+        "ralphjsmit/laravel-seo": "Builds page metadata from the descriptor's seo map."
+    },
+    "require-dev": {
+        "laravel/pint": "^1.32",
+        "orchestra/testbench": "^11.3",
+        "phpunit/phpunit": "^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Proteo\\DrupalBackend\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Proteo\\DrupalBackend\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Proteo\\DrupalBackend\\DrupalBackendServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "lint": "vendor/bin/pint --test"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
